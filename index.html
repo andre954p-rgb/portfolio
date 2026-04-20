@@ -59,7 +59,9 @@
   /* ── LAYOUT ── */
   .wrapper {
     display: flex;
+    max-width: 1350px
     min-height: 100vh;
+    margin: 0 auto
     position: relative; z-index: 2;
   }
 
@@ -72,7 +74,8 @@
     flex-direction: column;
     align-items: center;
     padding: 24px 0;
-    position: fixed;
+    position: sticky;
+    height: 100vh;
     top: 0; left: 0; bottom: 0;
     z-index: 100;
   }
@@ -169,7 +172,6 @@
     min-height: 100vh;
     background: var(--panel);
     border-right: 1px solid var(--border);
-    margin-left: 72px;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -325,7 +327,6 @@
   /* ── MAIN CONTENT ── */
   .main {
     flex: 1;
-    margin-left: 412px;
     padding: 40px 48px;
     max-width: 900px;
   }
@@ -817,7 +818,7 @@
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
     .hero-panel { width: 0; overflow: hidden; display: none; }
-    .main { margin-left: 72px; padding: 24px 24px; }
+    .main {padding: 24px 24px; }
     .skills-grid, .projects-grid, .two-col, .cert-grid { grid-template-columns: 1fr; }
   }
 </style>
